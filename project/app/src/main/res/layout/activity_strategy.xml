@@ -78,7 +78,7 @@
             android:layout_height="40dp"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            android:background="#FF9100"
+            android:background="#20AF71"
             android:gravity="center"
             android:text="검색"
             android:textColor="@color/white" />
