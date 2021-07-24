@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".State.StateActivity"></activity>
         <activity android:name=".BaseActivity" />
         <activity android:name=".Strategy.StrategyActivity" />
         <activity android:name=".MainActivity">

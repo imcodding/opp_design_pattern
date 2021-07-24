@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.mia.oppproject.State.StateActivity;
 import com.mia.oppproject.Strategy.StrategyActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(Pattern.STRATEGY);
+        startActivity(Pattern.STATE);
     }
 
     public void startActivity(int type) {
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
         switch (type) {
             case Pattern.STRATEGY:
                 intent = new Intent(getApplicationContext(), StrategyActivity.class);
+                break;
+            case Pattern.STATE:
+                intent = new Intent(getApplicationContext(), StateActivity.class);
                 break;
         }
         startActivity(intent);
