@@ -21,7 +21,9 @@
 🤖 로봇의 움직임: 2 칸 전진 -> 오른쪽으로 방향전환 -> 3 칸 전진 -> 왼쪽으로 방향전환 -> 1 칸 전진 <br>
 
 <img width="400" alt="스크린샷 2021-07-27 오전 12 06 52" src="https://user-images.githubusercontent.com/55366664/127013599-708a3b90-97e8-4efd-96de-6bc375bdd9c9.png">
+<br/>
 
-## 프로젝트
-- [Strategy](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/Strategy)
-- [State](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/State)
+## 😎 프로젝트
+- [Strategy](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/Strategy) - 카테고리에 따른 검색
+- [State](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/State) - 스위치를 통한 라이트/다크 모드 변경
+- [Command](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/Command) - 로봇이 수행하게 할 동작 명령
