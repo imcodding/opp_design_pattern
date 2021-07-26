@@ -1,10 +1,10 @@
 package com.mia.oppproject.Command;
 
-pubilc class Robot {
+public class Robot {
     public enum Direction { LEFT, RIGHT }
 
     public void moveForward(int dist) {
-        System.out.println(space + " 칸 전진");
+        System.out.println(dist + " 칸 전진");
     }
 
     public void turn(Direction _direction) {

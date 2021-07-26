@@ -7,7 +7,7 @@ abstract class Command {
         this.robot = _robot;
     }
 
-    public abstract void excute();
+    public abstract void execute();
 }
 
 class MoveForwardCommand extends Command {
@@ -15,23 +15,24 @@ class MoveForwardCommand extends Command {
     public MoveForwardCommand(int _space) {
         this.space = _space;
     }
-    public void excute() {
-        robot.moveForward(space)
+    public void execute() {
+        robot.moveForward(space);
     }
 }
 
 class TurnCommand extends Command {
     Robot.Direction direction;
-    public TurnCommand(int _direction) {
+    public TurnCommand(Robot.Direction _direction) {
         this.direction = _direction;
     }
-    public void excute() {
+    public void execute() {
         robot.turn(direction);
     }
 }
 
 class PickupCommand extends Command {
-    public void excute() {
+    public void execute() {
         robot.pickup();
     }
 }
+
