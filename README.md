@@ -12,6 +12,15 @@
 특정 상태마다 다르게 할 일을 모듈화해서 지정해둘 때 쓰는 방식이다. 메소드가 실행될 때 상태값도 변경된다.<br/>
 라이트 모드에서 스위치를 가동하면 다크 모드로, 다크 모드에서는 라이트 모드로 상태가 전환된다.<br/><br/>
 <img width="400" alt="스크린샷 2021-07-24 오후 6 05 40" src="https://user-images.githubusercontent.com/55366664/126873379-ad9e56b5-96e5-4d32-a2b4-637c2c81c246.png">
+<br /><br/>
+
+## ▪️ 커맨드 패턴 (Command Pattern)
+전략 패턴은 기능은 같고 방식이 다르다면 커맨트 패턴은 기능, 즉 하는 일 자체가 다르다.<br/>
+방식은 다양하다. 모드 변경에 따라 명령을 갈아기우는 방식, 스위치 처럼 on/off 시 명령을 갈아끼우는 방식,<br>
+여러 개의 명령을 목록으로 보내서 차례대로 실행하는 방식 등이 있다.<br/><br/>
+🤖 로봇의 움직임: 2 칸 전진 -> 오른쪽으로 방향전환 -> 3 칸 전진 -> 왼쪽으로 방향전환 -> 1 칸 전진 <br>
+
+<img width="400" alt="스크린샷 2021-07-27 오전 12 06 52" src="https://user-images.githubusercontent.com/55366664/127013599-708a3b90-97e8-4efd-96de-6bc375bdd9c9.png">
 
 ## 프로젝트
 - [Strategy](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/Strategy)
