@@ -1,10 +1,14 @@
-package com.mia.oppproject.Adpater;
-package com.mia.oppproject.Adpater.CookInterface;
-package com.mia.oppproject.Adpater.BakeInterface;
+package com.mia.oppproject.Adapter;
+
+import android.os.Bundle;
+
+import com.mia.oppproject.BaseActivity;
+import com.mia.oppproject.databinding.ActivityAdapterBinding;
 
 public class AdapterActivity extends BaseActivity {
 
     ActivityAdapterBinding binding;
+    CookInterface cookInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -12,34 +16,59 @@ public class AdapterActivity extends BaseActivity {
         binding = ActivityAdapterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        cookInterface = new KoreanFoodChef();
 
+        initListener();
+    }
+
+    public void initListener() {
+        binding.btnOrder.setOnClickListener(v->{ cookInterface.cook(); });
+        binding.ivKoreanFoodChef.setOnClickListener(v->{ setCookInterface(new KoreanFoodChef()); });
+        binding.ivChineseFoodChef.setOnClickListener(v->{ setCookInterface(new ChineseFoodChef()); });
+        binding.ivJapaneseFoodChef.setOnClickListener(v->{ setCookInterface(new JapaneseFoodChef()); });
+        // 어댑터 사용
+        binding.ivPastryChef.setOnClickListener(v->{ setCookInterface(
+                new FoodAndPastryChefAdapter(new PastryChef())
+        ); });
+    }
+
+    public void setCookInterface(CookInterface _cookInterface) {
+        cookInterface = _cookInterface;
     }
 
     // 한식 요리사
     class KoreanFoodChef implements CookInterface {
+
+        @Override
         public void cook() {
-            showToast("한식을 요리합니다.");
+            showToast("한국 요리사가 비빔을 만듭니다.");
         }
     }
 
     // 중식 요리사
     class ChineseFoodChef implements CookInterface {
+
+        @Override
         public void cook() {
-            showToast("중식을 요리합니다.");
+            showToast("중식 요리사가 자장면을 만듭니다.");
         }
     }
 
     // 일식 요리사
     class JapaneseFoodChef implements CookInterface {
+
+        @Override
         public void cook() {
-            showToast("일식을 요리합니다.");
+            showToast("일식 요리사가 초밥을 만듭니다.");
         }
     }
 
     // 파티시에
     class PastryChef implements BakeInterface {
-        public void cook() {
-            showToast("빵을 만듭니다.");
+
+        @Override
+        public void bake() {
+            showToast("파티시에가 빵을 굽습니다.");
         }
     }
 
@@ -47,7 +76,7 @@ public class AdapterActivity extends BaseActivity {
     class FoodAndPastryChefAdapter implements CookInterface {
         private BakeInterface bakeInterface;
 
-        public void FoodAndPastryChefAdapter(BakeInterface _bakeInterface) {
+        public FoodAndPastryChefAdapter(BakeInterface _bakeInterface) {
             bakeInterface = _bakeInterface;
         }
 
@@ -55,16 +84,4 @@ public class AdapterActivity extends BaseActivity {
             bakeInterface.bake();
         }
     }
-
-    /**
-     * 어댑터는 인터페이스가 서로 다른 객체들이
-     * 같은 형식 아래 작동할 수 있도록 하는 역할을 한다.
-     *
-     * 예를 들어, 어떤 식당에서 파티셰를 고용했다.
-     * 요리사는 요리를 하고 파티셰는 제과를 한다고 가정해보자.
-     * 매니저는 요리사한테는 요리해라,
-     * 파티셰한테는 제과해라 하기가 번거롭다.
-     * 그래서 파티셰한테 어댑터를 달아주고 앞으로 매니저가
-     * 요리해달라고 하면 파티셰는 제과를 하면 되는 것이다.
-     */
 }
