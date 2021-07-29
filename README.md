@@ -21,9 +21,18 @@
 🤖 로봇의 움직임: 2 칸 전진 -> 오른쪽으로 방향전환 -> 3 칸 전진 -> 왼쪽으로 방향전환 -> 1 칸 전진 <br>
 
 <img width="400" alt="스크린샷 2021-07-27 오전 12 06 52" src="https://user-images.githubusercontent.com/55366664/127013599-708a3b90-97e8-4efd-96de-6bc375bdd9c9.png">
-<br/>
+<br/><br/>
+
+## ▪️ 어댑터 패턴 (Adapter Pattern)
+어댑터는 인터페이스가 서로 다른 객체들이 같은 형식 아래 작동할 수 있도록 하는 역할을 한다. <br/><br/>
+예를 들어, 어떤 식당에서 파티셰를 고용했다. 요리사는 요리를 하고 파티셰는 제과를 한다고 가정해보자. <br/>
+매니저는 매번 요리사한테는 '요리해라', 파티셰한테는 '제과해라' 하기가 번거롭다. <br/><br/>
+그래서 파티셰한테 어댑터를 달아주고 앞으로 매니저가 요리해달라고 하면 파티셰는 제과를 하면 되는 것이다.<br/><br/>
+<img width="400" alt="스크린샷 2021-07-29 오후 8 55 39" src="https://user-images.githubusercontent.com/55366664/127487943-07abbf36-760d-4546-a635-cf85b848e210.png">
+
 
 ## 😎 프로젝트
 - [Strategy](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/Strategy) - 카테고리에 따른 검색
 - [State](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/State) - 스위치를 통한 라이트/다크 모드 변경
 - [Command](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/Command) - 로봇이 수행하게 할 동작 명령
+- [Adapter](https://github.com/imcodding/opp_design_pattern/tree/main/project/app/src/main/java/com/mia/oppproject/Adapter) - 요리사와 파티셰에게 주문하기
