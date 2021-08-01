@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".Adapter.AdapterActivity"></activity>
+        <activity android:name=".Proxy.ProxyActivity"></activity>
+        <activity android:name=".Adapter.AdapterActivity" />
         <activity android:name=".Command.CommandActivity" />
         <activity android:name=".State.StateActivity" />
         <activity android:name=".BaseActivity" />

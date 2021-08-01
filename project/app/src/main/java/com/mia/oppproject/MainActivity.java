@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.mia.oppproject.Adapter.AdapterActivity;
 import com.mia.oppproject.Command.CommandActivity;
+import com.mia.oppproject.Proxy.ProxyActivity;
 import com.mia.oppproject.State.StateActivity;
 import com.mia.oppproject.Strategy.StrategyActivity;
 
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(Pattern.ADAPTER);
+        startActivity(Pattern.PROXY);
     }
 
     public void startActivity(int type) {
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case Pattern.ADAPTER:
                 intent = new Intent(getApplicationContext(), AdapterActivity.class);
+                break;
+            case Pattern.PROXY:
+                intent = new Intent(getApplicationContext(), ProxyActivity.class);
                 break;
         }
         startActivity(intent);
